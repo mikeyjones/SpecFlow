@@ -4,7 +4,7 @@
     <!-- Template Header -->
     <TemplateConfiguration>
         <_Name>SpecFlow NUnit Library Project</_Name>
-        <_Category>SpecFlow</_Category>
+        <Category>other/net/general</Category>
         <Icon>md-project|res:SpecFlowProjectIcon.ico</Icon>
         <_Description>Creates an SpecFlow library</_Description>
         <LanguageName>C#</LanguageName>
@@ -30,7 +30,7 @@
             </References>
 
             <Packages>
-                <Package ID="SpecFlow.NUnit" Version="2.1.0" />
+                <Package ID="SpecFlow.NUnit" Version= "2.2.1" />
             </Packages>
 
             <Files>

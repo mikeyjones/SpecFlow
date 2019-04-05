@@ -13,9 +13,9 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTitle("VisualStudio.SpecFlow")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ABEL Learning Limited")]
+[assembly: AssemblyCompany("SteightEight")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("ABEL Learinng Limited")]
+[assembly: AssemblyCopyright("SteightEight")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".

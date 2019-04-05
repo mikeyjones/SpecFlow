@@ -1,7 +1,7 @@
 <ExtensionModel>
 	<Dependencies>
-        <Addin id="::MonoDevelop.Core" version="7.0" />
-        <Addin id="::MonoDevelop.Ide" version="7.0" />
+        <Addin id="::MonoDevelop.Core" version="8.0" />
+        <Addin id="::MonoDevelop.Ide" version="8.0" />
     </Dependencies>
 	<Runtime>
 		<Import assembly="Gherkin.dll"/>
@@ -36,7 +36,7 @@
     </Extension>
 
     <Extension path = "/MonoDevelop/Ide/ProjectTemplates">
-        <ProjectTemplate id = "SpecFlowProject" resource="SpecFlowProject.xpt.xml"/>
+        <ProjectTemplate id="SpecFlowProject" resource="SpecFlowProject.xpt.xml"/>
     </Extension>
 
 	<Extension path="/MonoDevelop/Ide/FileTemplates">

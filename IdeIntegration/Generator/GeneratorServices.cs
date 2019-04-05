@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TechTalk.SpecFlow.Generator.Interfaces;
 using TechTalk.SpecFlow.IdeIntegration.Tracing;
 
@@ -42,13 +43,8 @@ namespace TechTalk.SpecFlow.IdeIntegration.Generator
 
             return result;
         }
-        
-        protected virtual ITestGeneratorFactory GetTestGeneratorFactoryForCreate()
-        {
-            return GetTestGeneratorFactoryOfIDE(); 
-        }
 
-        protected ITestGeneratorFactory GetTestGeneratorFactoryOfIDE()
+        protected virtual ITestGeneratorFactory GetTestGeneratorFactoryForCreate()
         {
             return testGeneratorFactory;
         }
@@ -56,14 +52,14 @@ namespace TechTalk.SpecFlow.IdeIntegration.Generator
         public ITestGenerator CreateTestGenerator()
         {
             var testGeneratorFactoryForCreate = GetTestGeneratorFactoryForCreate();
-            return testGeneratorFactoryForCreate.CreateGenerator(GetProjectSettingsCached());
+            return testGeneratorFactoryForCreate.CreateGenerator(GetProjectSettingsCached(),new List<string>());
         }
 
-        public ITestGenerator CreateTestGeneratorOfIDE()
-        {
-            var testGeneratorFactoryForCreate = GetTestGeneratorFactoryOfIDE();
-            return testGeneratorFactoryForCreate.CreateGenerator(GetProjectSettingsCached());
-        }
+        //public ITestGenerator CreateTestGeneratorOfIDE()
+        //{
+        //    var testGeneratorFactoryForCreate = GetTestGeneratorFactoryOfIDE();
+        //    return testGeneratorFactoryForCreate.CreateGenerator(GetProjectSettingsCached());
+        //}
 
         public virtual Version GetGeneratorVersion()
         {

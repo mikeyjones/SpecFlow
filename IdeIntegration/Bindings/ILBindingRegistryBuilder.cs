@@ -45,9 +45,11 @@ namespace TechTalk.SpecFlow.IdeIntegration.Bindings
 
         public IEnumerable<IStepDefinitionBinding> GetStepDefinitionsFromAssembly(string assemblyPath)
         {
-            var bindingProcessor = new IdeBindingSourceProcessor(tracer);
-            ProcessStepDefinitionsFromAssembly(assemblyPath, bindingProcessor);
-            return bindingProcessor.ReadStepDefinitionBindings();
+            //var bindingProcessor = new IdeBindingSourceProcessor(tracer);
+            //ProcessStepDefinitionsFromAssembly(assemblyPath, bindingProcessor);
+            //return bindingProcessor.ReadStepDefinitionBindings();
+
+            return new List<IStepDefinitionBinding>();
         }
 
         private BindingSourceMethod CreateBindingSourceMethod(MethodDefinition methodDefinition, BindingSourceType bindingSourceType, IBindingSourceProcessor bindingSourceProcessor)
@@ -63,7 +65,7 @@ namespace TechTalk.SpecFlow.IdeIntegration.Bindings
 
         private BindingType CreateBindingType(TypeReference typeReference)
         {
-            return new BindingType(typeReference.Name, typeReference.FullName);
+            return new BindingType(typeReference.Name, typeReference.FullName, typeReference.Module.Assembly.FullName);
         }
 
         private IEnumerable<IBindingParameter> GetParameters(MethodDefinition methodDefinition)
